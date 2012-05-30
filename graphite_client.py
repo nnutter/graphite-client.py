@@ -33,10 +33,6 @@ class Graphite:
         return header + data
 
     def send_queue(self):
-        # Maybe this doesn't work because our carbon is old.
-        # But the code looks the same and looks like this
-        # should work but it doesn't.
-        raise Exception("I haven't got this working yet.")
         self.socket.send(self.pack(self.queue))
         self.queue = []
 
